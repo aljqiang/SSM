@@ -1,0 +1,53 @@
+@charset "utf-8";
+/*-=-=-=-=-=module模块Begin-=-=-=-=-=-=*/
+.SR_moduleBox{
+	height:35px;
+	width: 100%;
+	}
+.SR_moduleTitle{
+	height:35px;
+	overflow:hidden;
+	float:left;
+	background: url(../images/title/mark.gif) left center no-repeat;
+	text-indent:10px;
+	line-height:35px;
+	padding:0px 10px;
+	color:#444444;
+	font-size:14px;
+	font-weight:700;
+	}
+.SR_moduleTitle a{
+	padding-right:20px;
+	background:url(../images/title/up.png) right center no-repeat;
+	color: #444444;
+	text-decoration: none;
+	}
+.SR_moduleTitle a:hover{
+	padding-right:20px;
+	background:url(../images/title/down.png) right center no-repeat;
+	color: #444444;
+	text-decoration: underline;
+	}
+.SR_moduleRight{
+	height:25px;
+	overflow:hidden;
+	float:right;
+	line-height:25px;
+	font-size:12px;
+	cursor:pointer;
+	margin-top:6px;
+	}
+.SR_moduleRight a{
+	margin-right:10px;
+	}
+.SR_moduleRight a:hover{
+	margin-right:10px;
+	color:#ff7a00;
+	}
+.SR_moduleContent{
+	height:35px;
+	width:600px;
+	float:left;
+	line-height:35px;
+	font-size:12px;
+	}

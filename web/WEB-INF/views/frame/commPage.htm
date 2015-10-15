@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>公共显示页面</title>
+	<script src="../../KJAF/include.js" type="text/javascript"></script>
+<script type="text/javascript">
+	String.prototype.replaceAll = function(s1,s2) { 
+    return this.replace(new RegExp(s1,"gm"),s2);  
+}
+
+
+function getParamForcommPage(loc){
+	//debugger;
+	var str = loc?loc.search:location.search;
+	if(str=='')return {};
+	str = str.substring(1,str.length);
+	if(str=='')return {};
+	var ary = str.split('&');
+	var obj = {};
+	    obj.data={};
+	for(var i=0;i<ary.length;i++){
+		var temp1='',temp2='';
+		var idx = ary[i].indexOf('=');
+		if(idx == -1)
+			temp1 = ary[i];
+		else{
+			temp1=ary[i].substring(0,idx);
+			temp2=ary[i].substring(idx+1,ary[i].length)
+			if(temp2.indexOf("(")>0)  //含有括号的默认为有js函数，使用eval来执行他
+			{
+			     if(temp2.indexOf("引号")>0)
+			       temp2 = temp2.replaceAll("引号","'");
+			     temp2=eval(temp2);
+			 
+			 
+			 }
+		}
+		if(temp1 =="confId")
+		   obj.confId = temp2;
+		 else
+		 	 obj.data[temp1]=temp2;
+	}
+	return obj;
+}
+	
+	
+var p_MainList;
+var p_pageParam = getParamForcommPage(location);  
+
+$(function(){
+	p_MainList = new DataGrid();
+	p_MainList.setParam({
+		id:'idMainList',
+		passParam:p_pageParam.data,
+		confId:p_pageParam.confId
+	})
+	p_MainList.draw();
+
+});
+
+</script>
+</head>
+<body>
+<div id="idMainList"></div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.IDao.sys.TresourceMapper" >
+  <resultMap id="BaseResultMap" type="com.ssm.model.sys.Tresource" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="URL" property="url" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="ICON" property="icon" jdbcType="VARCHAR" />
+    <result column="PID" property="pid" jdbcType="DECIMAL" />
+    <result column="SEQ" property="seq" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="DECIMAL" />
+    <result column="RESOURCETYPE" property="resourcetype" jdbcType="DECIMAL" />
+    <result column="CREATEDATETIME" property="createdatetime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, NAME, URL, DESCRIPTION, ICON, PID, SEQ, STATE, RESOURCETYPE, CREATEDATETIME
+  </sql>
+
+  <!-- 查询菜单-->
+  <select id="getUserMenu" resultMap="BaseResultMap" parameterType="java.lang.String" >
+          select
+                distinct t.*
+          from
+                sys_resource t
+          where 1=1
+          <if test="resourcetype != null" >
+                and t.resourcetype = #{resourcetype,jdbcType=VARCHAR}
+          </if>
+          order by t.seq,t.id
+  </select>
+
+    <!-- 获取用户资源列表-->
+    <select id="getResoureByUser" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        select
+            distinct re.*
+        from sys_resource re
+        left join sys_role_resource rr on  rr.resource_id=re.id
+        where rr.role_id in (
+            select ur.role_id from sys_user u left join sys_user_role ur on ur.user_id = u.id
+            where 1=1
+            <if test="id != null" >
+                  and u.id = #{id,jdbcType=VARCHAR}
+            </if>
+            <if test="loginname != null" >
+                and u.loginname = #{loginname,jdbcType=VARCHAR}
+            </if>
+            <if test="resourcetype != null" >
+                and re.resourcetype = #{resourcetype,jdbcType=VARCHAR}
+            </if>
+        )
+        order by re.seq,re.id
+    </select>
+
+    <!-- 获取所有的资源列表-->
+    <select id="getResourceAll" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        select
+            distinct re.*
+        from
+            sys_resource re
+        order by re.id
+    </select>
+</mapper>

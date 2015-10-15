@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*表格按钮的样式Begin*/
+html, body {
+height: 100%;
+}
+.SR_btn{ margin-top:10px; width:100%; height:30px; }
+.SR_btn .SR_btnSpace{ width:200px; height:30px; margin:0px auto; }
+.SR_btn .SR_btnSpace .SR_conserve{ width:95px; height:30px; float:left; }
+.SR_btn .SR_btnSpace .SR_conserve a{ display:block; width:95px; height:30px; background:#f2601d; text-decoration:none; text-align:center; line-height:30px; color:#fff; font-size:12px; }
+.SR_btn .SR_btnSpace .SR_conserve a:hover{ display:block; width:95px; height:30px; background:#de5313; text-decoration:none; text-align:center; line-height:30px; color:#fff; font-size:12px; }
+.SR_btn .SR_btnSpace .SR_concel{ width:95px; height:30px; float:right; }
+.SR_btn .SR_btnSpace .SR_concel a{ display:block; width:95px; height:30px; background:#c1bfbf; text-decoration:none; text-align:center; line-height:30px; color:#fff; font-size:12px; }
+.SR_btn .SR_btnSpace .SR_concel a:hover{ display:block; width:95px; height:30px; background:#cccccc; text-decoration:none; text-align:center; line-height:30px; color:#fff; font-size:12px; }
+.SR_moduleSearch_ser{ float:left; width:55px; height:25px; display:block; cursor:pointer; margin-bottom:3px; background:url(../images/index/indexSearchBtn.png) top no-repeat; margin-right:10px; margin-top:2px; }	
+/*表格按钮的样式End*/
+.SR_longBtnSpace{ height:30px; margin:0px auto; width:340px; }
+.SR_longBtnSpace li{ overflow:hidden; height:30px; float:left; margin:0px 5px; }
+.SR_longBtnSpace li a{ background:#06C; height:30px; line-height:30px; overflow:hidden; padding:10px 20px; color:#ffffff; font-size:12px; }
+.SR_longBtnSpace .SR_conserve a{ background:#f2601d; }
+.SR_longBtnSpace .SR_conserve a:hover{ background:#de5313; }
+.SR_longBtnSpace .SR_concel a{ background:#c1bfbf; }
+.SR_longBtnSpace .SR_concel a:hover{ background:#cccccc; } 
+.SR_longBtnSpace .SR_other a{ background:#f2601d; }
+.SR_longBtnSpace .SR_other a:hover{ background:#de5313; } 
+
+.floatBtn{ width: 100%; background:#eeeeee; height: 50px; position: fixed; bottom: 0px; border-top: 1px #cccccc;
+ _POSITION: absolute;/*兼容IE6*/
+ _TOP: expression(offsetParent.scrollTop+document.documentElement.clientHeight-this.offsetHeight);/*兼容IE6*/
+ overflow:hidden;}
+.floatSmallBtn{ width: 140px; height: 20px; margin:15px auto;  }
+.floatSmallBtn a{ margin-left: 10px;}

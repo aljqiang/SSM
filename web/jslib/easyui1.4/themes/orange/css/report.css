@@ -1,0 +1,70 @@
+@charset "utf-8";
+body{
+	background:#fcfcfc;
+	}
+.SR_moduleContent{
+	overflow:hidden;
+	width:600px;
+	float:left;
+	font-size:12px;
+	}
+.SR_moduleContent table{
+	text-align:right;
+	}
+.SR_moduleContent .SR_dateInput{
+	border:1px solid #ccc; 
+	color:#444444;
+	height:20px;
+	width:100px;
+	text-align:center;
+	}
+.SR_moduleContent .SR_searchInput{
+	border:1px solid #ccc; 
+	color:#444444;
+	height:20px;
+	width:180px;
+	text-align:center;
+	font-size:12px;
+	line-height:20px;
+	color:#ccc;
+	text-align:left;
+	text-indent:10px;
+	}
+.SR_reportRight{
+	height:25px;
+	width:160px;
+	float:right;
+	line-height:31px;
+	font-size:12px;
+	margin-top:3px;
+	}
+.SR_reportRight a{
+	margin-left:10px;
+	}
+/*标题搜索模块End*/
+
+/*正文Begin*/
+.reportContent{
+	background:#ffffff url(../images/report/reportContentBg.png) no-repeat bottom;
+	width:617px;
+	overflow:hidden;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:20px;
+	padding-bottom:40px;
+	margin:10px auto;
+	color:#222222;
+	}
+.reportContent h3{
+	text-align:center;
+	line-height:50px;
+	border-bottom:solid 1px #dfe1e1;
+	}
+.reportContent p{
+	line-height:34px;
+	font-size:14px;
+	text-indent:34px;
+	}
+.reportContent h4{
+	line-height:34px;
+	}

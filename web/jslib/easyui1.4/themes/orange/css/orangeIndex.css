@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors PC
+ * @date    2014-01-16 14:41:50
+ * @version $Id$
+ */
+/*样式初始化Begin*/
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px "宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+a{text-decoration:none; color:#444444;}
+a:hover{;color:#f58117;}
+em{font-style:normal}
+ul,li{list-style:none}
+img{border:0;vertical-align:middle}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+/*样式初始化End*/
+
+/*页面主要样式Begin*/
+.SR_orangeIndexBox{ width: 100%; background: #fafafa;overflow: hidden; min-width: 1180px;}
+.SR_orangeIndexBox .SR_orangeIndexTable{ width: 100%;}
+.SR_orangeIndexBox .left{vertical-align: top; padding: 0px 0px 0px 10px;}
+.SR_orangeIndexBox .right{vertical-align: top;width:266px; padding: 0px 10px 0px 10px;  }
+/*页面主要样式End*/
+
+/*图表Begin*/
+.chartTitle{  background: url(../images/chartTitle.png) repeat-x;position: relative;}
+.chartTitle h1{font-size: 12px; text-indent:35px; color:#888888; height: 30px; line-height: 30px; background: url(../images/chartMark.png) no-repeat 10px 5px;  }
+.chartContent{border:1px solid #eeeeee; padding: 0px; background: #ffffff; position: relative;}
+.chartImg{ width: 406px; height: 291px; margin:20px auto;}
+.radioBox{ /*background: url(../images/radioBg.png) no-repeat top center;*/ width: 168px; height: 29px; position: absolute; left:60%; top:4px;}
+.radioBox a{ display: block; width: 45px; float: left; margin:5px 0px 0px 10px; position: relative;  font-size: 12px;}
+.radioBox a input{position: absolute; left: 0px; top:0px; margin:0px; padding: 0px; height: 12px; width: 12px;}
+.radioBox a span{ display: block; width: 35px; height: 12px; line-height: 12px; top:0px; left:14px; position: absolute;}
+/*图表End*/
+
+
+/*待办模块Begin*/
+.doListBox{padding: 10px;}
+.SJ_indexBoxTitle{ height: 30px; position: relative; border-bottom: 1px solid #f47f14; background: url(../images/titlebg.gif) repeat-x; }
+.SJ_indexBoxTitle h1{ height: 30px;  width: 200px; background: url(../images/title.png) no-repeat left; font-size: 12px; font-weight: 700; line-height: 30px; color: #ffffff; text-indent: 10px; position: absolute; left:0px; top:0px;}
+.SJ_indexBoxTitle a{display: block; width: 45px; height: 30px; background:url(../images/more.gif) no-repeat right; right: 10px; top:0px; line-height: 30px; position: absolute; color: #f58117; }
+.SJ_indexBoxTitle a:hover{color: #ff6000;}
+.SJ_indexBox{ overflow: hidden; background: #ffffff;}
+.SJ_indexBox .title{width: 100%; height:25px; position: relative;}
+.SJ_indexBox .title ul li{ width: 74px; height: 25px;  float: left; margin-right:5px;}
+.SJ_indexBox .title ul li a{ width: 74px; height: 25px; display: block;background: url(../images/tabNormal.png) no-repeat left bottom; line-height: 25px; font-size: 12px; font-weight: 700; text-align: center; color: #444444;}
+.SJ_indexBox .title ul li a:hover{ width: 74px; height: 25px; display: block;background: url(../images/tabPressed.png) no-repeat left bottom; line-height: 25px; font-size: 12px; font-weight: 700; text-align: center; color: #ffffff; text-decoration: none;}
+.SJ_indexBox .title ul li .active{ width: 74px; height: 25px; display: block;background: url(../images/tabPressed.png) no-repeat left bottom; line-height: 25px; font-size: 12px; font-weight: 700; text-align: center; color: #ffffff; text-decoration: none;}
+.SJ_indexBoxContentBox{ display: none; overflow: hidden;}
+.more{ line-height:33px; float:right; display: block; font-size: 14px; font-weight: 700; color: #444444;}
+.contentTable { background: #ffffff; border-right:1px solid  #cccccc; border-top:1px #cccccc solid; border-left:none; border-bottom:none; width:100%; text-align:center; border-collapse:collapse; color: #444444;}
+.contentTable th{ background: #f4f4f4; height:22px; border-left:1px solid  #cccccc; border-bottom:1px #cccccc solid; border-top:none; border-right:none; font-size:12px; line-height:22px;font-weight: 300; }
+.contentTable td{ border-left:1px solid  #cccccc; border-bottom:1px #cccccc solid; border-top:none; border-right:none; font-size:12px; line-height:22px; }
+
+/*待办模块End*/
+
+/**/
+.round_top{background: url(../images/top.png) top center no-repeat; height: 6px; overflow: hidden;}
+.round_center{background: url(../images/center.png) top center repeat-y; overflow: hidden;}
+.round_bottom{background: url(../images/bottom.png) top center no-repeat; height: 6px;overflow: hidden;}
+/**/
+.title h1{position: relative;}
+.title h1 a{display: block; width: 45px; height: 30px; background:url(../images/more.gif) no-repeat right; right: 10px; top:0px; line-height: 30px; position: absolute; color: #f58117; text-indent: 0px; font-weight: 300; }
+.title h1 a:hover{color: #ff6000;}
+
+/*提醒模块Begin*/
+.remindBox{ width: 99%;overflow: hidden; margin: 0px auto; margin-top:10px; }
+.remindBox .title{width: 100%; height:33px; background: url(../images/titleMark.png) no-repeat left #ffffff; line-height: 33px;}
+.remindBox .title h1{ width: 100px; height: 33px; float: left; font-size:12px; font-weight:700; color: #444444; text-indent: 12px;}
+/*提醒模块End*/
+/*系统公告Begin*/
+.announcement{ width: 266px; overflow: hidden; background: #ffffff; margin-top:10px; }
+.announcement .title{ height: 30px; line-height: 30px; width: 240px; border-bottom: 1px solid #cccccc;margin:0px auto;}
+.announcement .title h1{ width: 240px; float: left; font-size: 12px; color: #888888; line-height: 30px;text-indent:40px; background:url(../images/mark1.gif) no-repeat left center;}
+.announcementContemt{ width: 240px; overflow:hidden;padding: 0px 10px;}
+.movieBox{ width: 240px; height: 150px; position: relative; }
+.centerBox{width: 240px; overflow: hidden; }
+.warp{ width: 240px; height: 150px; position: absolute; right: 0px;  overflow:hidden;}
+.warp ul{position: absolute;top: 0px; left: 0px;}
+.warp ul li{ width: 240px; height: 30px; font-size: 12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;background: url(../images/markNormal.png) no-repeat left center;text-indent: 10px; line-height: 30px; }
+.warp ul li a{text-decoration: none; color: #444444; }
+.warp ul li a:hover{color: #fe7e12;}
+
+.centerWarp{ width: 240px;   overflow:hidden;}
+.centerWarp ul li{ width: 240px; height: 30px; font-size: 12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;background: url(../images/markNormal.png) no-repeat left center;text-indent: 10px; line-height: 30px; }
+.centerWarp ul li a{text-decoration: none; color: #444444; }
+.centerWarp ul li a:hover{color: #fe7e12;}
+
+.rankingWarp{ width: 240px;   overflow:hidden;}
+.rankingWarp ul li{ width: 240px; height: 30px; font-size: 12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;text-indent: 20px; line-height: 30px; position: relative; }
+.rankingWarp ul li span{ display: block; position: absolute; top:9px; left:0px; line-height: 13px; text-align: center; text-indent: 0px; color: #ffffff;  width: 17px; height: 13px;background: url(../images/rankingMarkGray.png) no-repeat left center;}
+.rankingWarp ul li a{text-decoration: none; color: #444444; }
+.rankingWarp ul li a:hover{color: #fe7e12;}
+/*系统公告End*/
+
+/**/
+.workList{ height: 30px; line-height: 30px; width: 246px; margin:0px auto;}
+.workList ul li{ float: left; width: 123px; height: 30px; text-align: center;}
+.workList ul li a{ border-bottom:2px solid #eeeeee; display: block;width: 123px; height: 30px; }
+.workList ul li a:hover{ color:#f58117;border-bottom:2px solid #f58117; display: block;width: 123px; height: 30px; }
+.workList ul li .active{ color:#f58117;border-bottom:2px solid #f58117; display: block;width: 123px; height: 30px; }
+/**/

@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>MAIN PAGE</title>
+	<link href="../../KJAF/css/main.css" rel="stylesheet" type="text/css">
+<script>
+window.onload =function(){
+	var urlStr = location.search;
+	var forwardUrl = urlStr.substring(urlStr.indexOf('forward=')+8,urlStr.length);
+	setTimeout(function(){location.href=forwardUrl},1)
+}
+</script>
+</head>
+<body><div style="margin:10px;">正在加载页面, 请稍候...</div></body>
+</html>

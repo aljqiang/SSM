@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors PC
+ * @date    2014-01-16 14:41:50
+ * @version $Id$
+ */
+/*样式初始化Begin*/
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px "宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+a{text-decoration:none}
+a:hover{text-decoration:underline}
+em{font-style:normal}
+ul,li{list-style:none}
+img{border:0;vertical-align:middle}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+/*样式初始化End*/
+
+/*页面主要样式Begin*/
+.SR_orangeIndexBox{ width: 100%; background: #f8f8f8;overflow: hidden;_width:expression((documentElement.clientWidth <= 800) ? "800px" : "auto" ); min-width: 800px;}
+.SR_orangeIndexBox .SR_orangeIndexTable{ width: 100%;}
+.SR_orangeIndexBox .left{vertical-align: top;}
+.SR_orangeIndexBox .right{vertical-align: top; background: #efefef; width:300px;}
+/*页面主要样式End*/
+
+/*待办模块Begin*/
+.doListBox{ width: 99%;overflow: hidden; margin: 0 0 0 auto; margin-top:10px; }
+.doListBox .title{width: 100%; height:33px; background: #ffffff; line-height: 33px; border-bottom: #f88a25 1px solid;}
+.doListBox .title h1{ width: 100px; height: 33px; float: left; font-size:12px; font-weight:700; color: #FFFFFF; background: #f88a25; text-indent: 12px;}
+.doListBox .title1{width: 100%; height:33px;border-bottom: #ddd 1px solid; margin-top: 10px;}
+.doListBox ul li{ width: 96px; height: 33px;  float: left; margin-right:2px;}
+.doListBox ul li a{ width: 96px; height: 33px; display: block;background: url(../images/tabNormal.png) no-repeat left bottom; line-height: 33px; font-size: 12px; font-weight: 700; text-align: center; color: #444444;}
+.doListBox ul li a:hover{ width: 96px; height: 33px; display: block;background: url(../images/tabPressed.png) no-repeat left bottom; line-height: 33px; font-size: 12px; font-weight: 700; text-align: center; color: #ffffff; text-decoration: none;}
+.doListBox ul li .active{ width: 96px; height: 33px; display: block;background: url(../images/tabPressed.png) no-repeat left bottom; line-height: 33px; font-size: 12px; font-weight: 700; text-align: center; color: #ffffff; text-decoration: none;}
+.dolistBoxContentBox{ display: none; overflow: hidden; margin: auto 10px auto 0;}
+.more{ line-height:33px; float:right; display: block; font-size: 14px; font-weight: 700; color: #444444; margin-right: 10px;}
+.contentTable { background: #ffffff; border-right:1px solid  #cccccc; border-top:1px #cccccc solid; border-left:none; border-bottom:none; width:100%; text-align:center; border-collapse:collapse; color: #444444; margin-top:10px; }
+.contentTable th{ background: #fcfcfc; height:30px; border-left:1px solid  #cccccc; border-bottom:1px #cccccc solid; border-top:none; border-right:none; font-size:12px; line-height:30px;font-weight: 300; }
+.contentTable td{ border-left:1px solid  #cccccc; border-bottom:1px #cccccc solid; border-top:none; border-right:none; font-size:12px; line-height:30px; }
+/*待办模块End*/
+
+/*提醒模块Begin*/
+.remindBox{ width: 99%;overflow: hidden; margin: 0 0 0 auto; margin-top:10px; }
+.remindBox .title{width: 100%; height:33px; background: #ffffff; line-height: 33px; border-bottom: #f88a25 1px solid;}
+.remindBox .title h1{ width: 100px; height: 33px; float: left; font-size:12px; font-weight:700; color: #FFFFFF; background: #f88a25; text-indent: 12px;}
+.remindBoxContent{overflow: hidden; margin: auto 10px auto 0;}
+/*提醒模块End*/
+
+/*客户信息模块Begin*/
+.customer{ width: 99%;overflow: hidden; margin: 0 0 0 auto; margin-top:10px; }
+.customer .title{width: 100%; height:33px; background: #ffffff; line-height: 33px; border-bottom: #f88a25 1px solid;}
+.customer .title h1{ width: 100px; height: 33px; float: left; font-size:12px; font-weight:700; color: #FFFFFF; background: #f88a25; text-indent: 12px;}
+.customerBoxContent{overflow: hidden; margin: auto 10px auto 0;}
+
+/*客户信息模块End*/
+
+/*商机模块Begin*/
+.businessBox{ width: 99%;overflow: hidden; margin: 0 0 0 auto; margin-top:10px; }
+.businessBox .title{width: 100%; height:33px; background: #ffffff; line-height: 33px; border-bottom: #f88a25 1px solid;}
+.businessBox .title h1{ width: 100px; height: 33px; float: left; font-size:12px; font-weight:700; color: #FFFFFF; background: #f88a25; text-indent: 12px;}
+.businessBox .title1{width: 100%; height:33px;border-bottom: #ddd 1px solid; margin-top: 10px;}
+.businessBox  ul li{ width: 96px; height: 33px;  float: left; margin-right:2px;}
+.businessBox  ul li a{ width: 96px; height: 33px; display: block;background: url(../images/tabNormal.png) no-repeat left bottom; line-height: 33px; font-size: 12px; font-weight: 700; text-align: center; color: #444444;}
+.businessBox  ul li a:hover{ width: 96px; height: 33px; display: block;background: url(../images/tabPressed.png) no-repeat left bottom; line-height: 33px; font-size: 12px; font-weight: 700; text-align: center; color: #ffffff; text-decoration: none;}
+.businessBox  ul li .active{ width: 96px; height: 33px; display: block;background: url(../images/tabPressed.png) no-repeat left bottom; line-height: 33px; font-size: 12px; font-weight: 700; text-align: center; color: #ffffff; text-decoration: none;}
+.businessContentBox{ overflow: hidden; display: none; margin: auto 10px auto 0;}
+.letterBtn { width: 100%; height: 24px; margin-top: 10px;}
+.letterBtn a{ display: block; width: 47px; height: 24px; float: left; margin-right:10px; background: url(../images/letterNormal.png) no-repeat center; line-height: 24px; text-align: center; color: #444444; }
+.letterBtn a:hover{ display: block; width: 47px; height: 24px; float: left; margin-right:10px; background: url(../images/letterPressed.png) no-repeat center; line-height: 24px; text-align: center; color: #ffffff; }
+.letterBtn .active{ display: block; width: 47px; height: 24px; float: left; margin-right:10px; background: url(../images/letterPressed.png) no-repeat center; line-height: 24px; text-align: center; color: #ffffff; text-decoration: none;}
+/*商机模块End*/
+
+/*系统公告Begin*/
+.announcement{ width: 280px; overflow: hidden; margin: 0px auto; background: #ffffff; margin-top: 10px;}
+.announcement .more{ color: #FFFFFF;}
+.announcement .title{ height: 30px; line-height: 30px; width: 280px; border-bottom: #f88a25 1px solid;  background:#f88a25;}
+.announcement .title h1{ width: 100px; float: left; font-size: 12px; color: #FFFFFF; line-height: 30px; margin-left: 10px;}
+.announcementContemt{ width: 260px; height: 150px; padding: 10px;}
+.movieBox{ width: 260px; height: 150px; position: relative;}
+.warp{ width: 260px; height: 150px; position: absolute; left: 0px; overflow:hidden;}
+.warp ul{position: absolute;top: 0px; left: 0px;}
+.warp ul li{ width: 260px; height: 30px; font-size: 12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.warp ul li a{text-decoration: none; color: #444444;}
+.warp ul li a:hover{ width: 260px; height: 30px; color: #fe7e12}
+/*系统公告End*/
+
+/*排产信息Begin*/
+.projectBox{ width: 280px; overflow: hidden; margin: 0px auto; background: #ffffff; margin-top:10px; }
+.projectBox .more{ color: #FFFFFF;}
+.projectBox .title{ height: 30px; line-height: 30px; width: 280px;  border-bottom: #f88a25 1px solid; background:#f88a25;}
+.projectBox .title h1{ width: 100px; float: left; font-size: 12px; color: #FFFFFF; line-height: 30px; margin-left: 10px;}
+.projectContent{width: 260px; overflow: hidden; padding: 0 10px 10px 10px;}
+.projectContent table th{ color: #f88a25;}
+/*排产信息End*/
+
+/*关键报表Begin*/
+.reportForms{ width: 280px; overflow: hidden; margin: 0px auto; background: #ffffff;  margin-top:10px; }
+.reportForms .more{ color: #FFFFFF;}
+.reportForms .title{ height: 30px; line-height: 30px; width: 280px;  border-bottom: #f88a25 1px solid; background:#f88a25;}
+.reportForms .title h1{ width: 100px; float: left; font-size: 12px; color: #FFFFFF; line-height: 30px; margin-left: 10px;}
+.reportFormsContent{ width: 260px; overflow: hidden; padding: 0 10px 0 10px;}
+.reportFormsContent ul li{ height: 30px; line-height: 30px; }
+.reportFormsContent ul li a{ color: #444444;}
+/*关键报表End*/

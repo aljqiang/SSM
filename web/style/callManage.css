@@ -1,0 +1,104 @@
+/*======top=========*/
+body.top{background:#dfe8f6 url(img/oldStyle_borderLine.gif) bottom repeat-x;margin:0;}
+#KDCC{display:none;}
+.topBar{background:#dee7f6;height:38px;line-height:42px;}
+.logo{width:182px;height:38px;background:url(img/logo.gif) no-repeat;float:left;}
+.logo_kingdom{width:180px;height:56px;background:url(img/logo_kingdom.gif) no-repeat;float:left;}
+.logo_guojin{width:180px;height:56px;background:url(img/logo_guojin.gif) no-repeat;float:left;}
+.logo_changjiang{width:182px;height:38px;background:url(img/logo_changjiang.gif) no-repeat;float:left;}
+.callBar{float:left;line-height:0px;padding-left:30px;}
+.announcement{line-height:64px;}
+.searchBar{float:left;}
+.msgPop{position:absolute;background:url(img/msgPop.gif) no-repeat;width:159px;height:26px;text-indent:10px;line-height:30px;}
+
+.red{color:#F77B00;}
+.topBar div{float:left;}
+.topBar .logo{}
+.topBar .txt{text-align:right; margin:0 0px 0 10px;}
+.topBar .val{margin:0 10px 0 1px;}
+/*
+.topBar .tabBtn{float:right;width:50px;text-align:center;height:24px;margin:0 1px 0 0;line-height:150%;background:url(img/tabBtn.gif) no-repeat;cursor:pointer;}
+.topBar .tabBtn.current{background:url(img/tabBtn_current.gif) no-repeat;cursor:default;}
+*/
+.topBar .exit{float:right;margin:0 10px 0 0;text-decoration:underline;cursor:pointer;color:#4F5CB9;}
+.topBar .exit:hover{color:#FF8102;text-decoration:none;}
+.topBar .skill{margin:0 10px 0 2px;text-decoration:underline;cursor:pointer;}
+.topBar .skill:hover{color:#FF8102;text-decoration:none;}
+.topBar .allBusy{display:none;margin:0 10px 0 10px;color:#F77B00;/*background:url(img/allBusyIcon.gif) left 20px no-repeat;text-indent:18px;height:40px;*/}
+.topBar .allBusy img{vertical-align:middle;width:16px;height:17px;}
+.topBar .messageIcon{margin:14px 1px 0 10px;float:left;}
+.topBar .verifyAlert{display:none;text-indent:18px;}
+.topBar .verifyAlert.yes{background:url(img/icon_yes.gif) left 13px no-repeat;color:green;}
+.topBar .verifyAlert.no{background:url(img/icon_no.gif) left 13px no-repeat;color:red;}
+
+.lampTableContainer{}
+.lampTableContainer td.inTableTab{width:190px;}
+.lampTableContainer td.inTableTab .tabBtn{float:left;width:62px;text-align:center;height:24px;margin:0 0 0 1px;line-height:150%;background:url(img/oldStyle_tabBtn.gif) no-repeat;cursor:pointer;color:#A5ADDE;}
+.lampTableContainer td.inTableTab .tabBtn.current{background:url(img/oldStyle_tabBtn_current.gif) no-repeat;cursor:default;color:#000;}
+.lampTableContainer td.inTableTab .tabBtn.KnowledgeBase{background:url(img/oldStyle_tabBtn_current.gif) no-repeat;cursor:pointer;color:#000;text-decoration:underline;}
+.lampTable{margin:0;padding:0;}
+.lampTable td.callBtnTD{width:70px;font-size:11px;text-align:center;cursor:default;color:#2A2A2A;}
+.lampTable td.hover{opacity: .50;filter:Alpha(Opacity=50);}
+.lampTable .divider{width:3px;height:50px;background:url(img/top_divider.gif) center 3px no-repeat;font-size:1px;}
+.lampTable .signIn{background:url(img/callIcons/oldStyle/signin_s.gif) center 5px no-repeat;}
+.lampTable .signIn.enable{background:url(img/callIcons/oldStyle/signin_y.gif) center 5px no-repeat; cursor:pointer;color:#333;}
+.lampTable .signOut{background:url(img/callIcons/oldStyle/signout.gif) center 5px no-repeat; cursor:pointer;color:#333;}
+.lampTable .signOut.disabled{background:url(img/callIcons/oldStyle/signout_s.gif) center 5px no-repeat;color:#C1CFE1;cursor:default;}
+.lampTable .busy{background:url(img/callIcons/oldStyle/busy_s.gif) center 5px no-repeat;}
+.lampTable .busy.enable{background:url(img/callIcons/oldStyle/busy_g.gif) center 5px no-repeat; cursor:pointer;color:#333;}
+.lampTable .free{background:url(img/callIcons/oldStyle/busy_r.gif) center 5px no-repeat; cursor:pointer;color:#333;}
+/*.lampTable .to2nd{background:url(img/callIcons/to2nd_s.gif) 0px 0px no-repeat;}
+.lampTable .to2nd.enable{background:url(img/callIcons/to2nd_y.gif) 0px 0px no-repeat; cursor:pointer;color:#333;}
+*/
+.lampTable .answer{background:url(img/callIcons/oldStyle/answer_s.gif) center 5px no-repeat;}
+.lampTable .answer.enable{background:url(img/callIcons/oldStyle/answer_y.gif) center 5px no-repeat; cursor:pointer;color:#333;}
+.lampTable .hangup{background:url(img/callIcons/oldStyle/hangup_s.gif) center 5px no-repeat;}
+.lampTable .hangup.enable{background:url(img/callIcons/oldStyle/hangup_y.gif) center 5px no-repeat; cursor:pointer;color:#333;}
+.lampTable .hangup.enable2{background:url(img/callIcons/oldStyle/hangup_y.gif) center 5px no-repeat; cursor:pointer;color:#333;}/*for stop play button*/
+.lampTable .callout{background:url(img/callIcons/oldStyle/callout_s.gif) center 5px no-repeat;}
+.lampTable .callout.enable{background:url(img/callIcons/oldStyle/callout_y.gif) center 5px no-repeat; cursor:pointer;color:#333;}
+.lampTable .idle{background:url(img/callIcons/oldStyle/wait_s.gif) center 5px no-repeat;}
+.lampTable .idle.enable{background:url(img/callIcons/oldStyle/wait_y.gif) center 5px no-repeat;cursor:pointer;color:#333;}
+.lampTable .verify{background:url(img/callIcons/oldStyle/verify_s.gif) center 5px no-repeat;}
+.lampTable .verify.enable{background:url(img/callIcons/oldStyle/verify_y.gif) center 5px no-repeat;cursor:pointer;color:#333;}
+.lampTable .transfer{background:url(img/callIcons/oldStyle/transfer_s.gif) center 5px no-repeat;}
+.lampTable .transfer.enable{background:url(img/callIcons/oldStyle/transfer_y.gif) center 5px no-repeat;cursor:pointer;color:#333;}
+.lampTable .hold{background:url(img/callIcons/oldStyle/hold_s.gif) center 5px no-repeat;}
+.lampTable .hold.enable{background:url(img/callIcons/oldStyle/hold_y.gif) center 5px no-repeat;cursor:pointer;color:#333;}
+.lampTable .unhold{background:url(img/callIcons/oldStyle/unhold_s.gif) center 5px no-repeat;}
+.lampTable .unhold.enable{background:url(img/callIcons/oldStyle/unhold_y.gif) center 5px no-repeat;cursor:pointer;color:#333;}
+.lampTable .monitor{background:url(img/callIcons/oldStyle/monitor_s.gif) center 5px no-repeat;}
+.lampTable .monitor.enable{background:url(img/callIcons/oldStyle/monitor_y.gif) center 5px no-repeat;cursor:pointer;color:#333;}
+.lampTable .register{background:url(img/callIcons/oldStyle/input_s.gif) center 5px no-repeat;}
+.lampTable .register.enable{background:url(img/callIcons/oldStyle/input_y.gif) center 5px no-repeat; cursor:pointer;color:#333;}
+/*
+.lampTable .password{background:url(img/callIcons/password_s.gif) 0px 0px no-repeat;}
+.lampTable .password.enable{background:url(img/callIcons/password_y.gif) 0px 0px no-repeat;cursor:pointer;color:#333;}
+*/
+.lampTable .mute{background:url(img/callIcons/oldStyle/mute_s.gif) center 5px no-repeat;}
+.lampTable .mute.enable{background:url(img/callIcons/oldStyle/mute_y.gif) center 5px no-repeat;cursor:pointer;color:#333;}
+.lampTable .unmute{background:url(img/callIcons/oldStyle/unmute_s.gif) center 5px no-repeat;}
+.lampTable .unmute.enable{background:url(img/callIcons/oldStyle/unmute_y.gif) center 5px no-repeat;cursor:pointer;color:#333;}
+
+.lampTable .await{background:url(img/callIcons/oldStyle/wait_s.gif) center 5px no-repeat;}
+.lampTable .await.online{background:url(img/callIcons/oldStyle/wait_y.gif) center 5px no-repeat;cursor:pointer;color:#333;}
+.lampTable .await.offline{background:url(img/callIcons/oldStyle/wait_s.gif) center 5px no-repeat;cursor:pointer;color:#333;}
+.lampTable .subscribe{background:url(img/callIcons/oldStyle/subscribe_s.gif) center 5px no-repeat;}
+.lampTable .subscribe.enable{background:url(img/callIcons/oldStyle/subscribe_g.gif) center 5px no-repeat;cursor:pointer;color:#333;}
+.lampTable .unsubscribe{background:url(img/callIcons/oldStyle/subscribe_r.gif) center 5px no-repeat;cursor:pointer;color:#333;}
+
+
+.searchBar{display:none;list-style:none;margin:10px 0 0 10px;}
+.searchBar li{float:left;margin-right:10px;}
+.searchBar li *{float:left;}
+.searchBar li label{color:#666;line-height:180%;}
+.searchBar li select{font-size:12px; height:20px; margin:0 1px 0 0;}
+.searchBar li input{width:150px;}
+.searchBar li .btn{background:url(img/searchBtn.gif) no-repeat; width:20px;height:20px;margin:0 0 0 1px;cursor:pointer;}
+.searchBar li .btn:hover{opacity: .50;filter:Alpha(Opacity=50);}
+
+.signOutReason{position:absolute; border:1px solid #ccc;width:140px;}
+.signOutReason_Title{background:#fff;height:18px;filter: alpha( opacity = 70);-moz-opacity: 0.70;opacity: 0.70;}
+.signOutReason_Title div{float:left;text-indent:5px;cursor:default;}
+.signOutReason_Title div.btn_close{float:right;background:#ff0000;border:1px solid #fff;color:#fff;font-size:10px;line-height:8px;width:10px;height:10px;margin:2px;cursor:pointer;text-align:center;text-indent:0;}
+.signOutReason_select{width:100%;background:#fff;height:24px;clear:both;filter: alpha( opacity = 90);-moz-opacity: 0.90;opacity: 0.90;}

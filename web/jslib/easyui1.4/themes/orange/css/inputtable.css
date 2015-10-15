@@ -1,0 +1,37 @@
+@charset "utf-8";
+.SR_inputTable{
+	width:100%;
+	overflow:hidden;
+	margin-top:10px;
+	}
+.SR_inputTable .SR_inputTableTitle{
+	width:100%;
+	font-size:14px;
+	font-weight:700;
+	text-align:left;
+	height:30px;
+	border-bottom:1px solid #cccccc;
+	line-height:30px;
+	text-indent:10px;
+	}
+.SR_inputTableContent{
+	width:100%;
+	overflow:hidden;
+	}
+.SR_inputTableContent table{
+	width:99%;
+	margin:0px auto;
+	}
+.SR_inputTableContent table td{
+	height:30px;
+	}
+.SR_inputTitle{
+	text-align:right;
+	width:120px;
+    font-size: 12px;
+	}
+.SR_textarea{
+	width:80%;
+	height:100px;
+	border:1px solid #ccc; 
+	}
