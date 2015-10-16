@@ -40,7 +40,8 @@ public class Tuser {
     private  Date createdatetimeStart;
     private Date createdatetimeEnd;
 
-    private List<Tdictionary> Tdictionary;
+    private Tdictionary tdictionary;
+    private Trole trole;
 
     public Integer getId() {
         return id;
@@ -194,11 +195,19 @@ public class Tuser {
         this.createdatetimeEnd = createdatetimeEnd;
     }
 
-    public List<com.ssm.model.sys.Tdictionary> getTdictionary() {
-        return Tdictionary;
+    public Tdictionary getTdictionary() {
+        return tdictionary;
     }
 
-    public void setTdictionary(List<com.ssm.model.sys.Tdictionary> tdictionary) {
-        Tdictionary = tdictionary;
+    public void setTdictionary(Tdictionary tdictionary) {
+        this.tdictionary = tdictionary;
+    }
+
+    public Trole getTrole() {
+        return trole;
+    }
+
+    public void setTrole(Trole trole) {
+        this.trole = trole;
     }
 }

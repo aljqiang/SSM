@@ -16,15 +16,13 @@
         <result column="ZYM" property="zym" jdbcType="VARCHAR"/>
         <result column="FJ_ID" property="fjId" jdbcType="DECIMAL"/>
 
-        <collection property="tdictionary" javaType="java.util.List" ofType="com.ssm.model.sys.Tdictionary">
-            <id column="d_id" property="id" jdbcType="INTEGER" />
-            <result column="d_code" property="code" jdbcType="VARCHAR" />
-            <result column="d_text" property="text" jdbcType="VARCHAR" />
-            <result column="d_dictionarytypeId" property="dictionarytypeId" jdbcType="INTEGER" />
-            <result column="d_seq" property="seq" jdbcType="INTEGER" />
-            <result column="d_state" property="state" jdbcType="INTEGER" />
-            <result column="d_isdefault" property="isdefault" jdbcType="INTEGER" />
-        </collection>
+        <association property="tdictionary" javaType="com.ssm.model.sys.Tdictionary">
+            <result column="text" property="text"/>
+        </association>
+
+        <association property="trole" javaType="com.ssm.model.sys.Trole">
+            <result column="userrole" property="userrole"/>
+        </association>
     </resultMap>
     <sql id="Base_Column_List">
     ID, LOGINNAME, NAME, PASSWORD, SEX, AGE, USERTYPE, ISDEFAULT, STATE, ORGANIZATION_ID, 
@@ -65,7 +63,7 @@
             select a.*, rownum rw from (
                 select
                     u.*,
-                    d.text as d_text,
+                    d.text,
                     r.name as userrole
                 from sys_user u
                 left join sys_dictionary d on d.code=u.usertype and d.dictionarytype_id=2

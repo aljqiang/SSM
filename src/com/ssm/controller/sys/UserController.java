@@ -9,6 +9,7 @@ import com.ssm.pageModel.base.Grid;
 import com.ssm.pageModel.base.PageFilter;
 import com.ssm.pageModel.sys.User;
 import com.ssm.service.UserServiceI;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +30,8 @@ import java.util.Map;
 @Controller
 @RequestMapping("/user")
 public class UserController extends BaseController {
+
+	private static Logger log =Logger.getLogger(UserController.class);
 
 	@Autowired
 	private UserServiceI userService;
@@ -53,6 +56,12 @@ public class UserController extends BaseController {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("total", total);
 		map.put("rows", users);
+
+//		for(Tuser user :users){
+//			log.info("==================测试Tdictionary返回值："+user.getTdictionary().getText());
+//			log.info("==================测试Trole返回值："+user.getTrole().getUserrole());
+//		}
+
 		return map;
 	}
 }

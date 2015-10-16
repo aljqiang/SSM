@@ -11,6 +11,8 @@ public class Trole {
 
     private Integer isdefault;
 
+    private String userrole;
+
     public Integer getId() {
         return id;
     }
@@ -49,5 +51,13 @@ public class Trole {
 
     public void setIsdefault(Integer isdefault) {
         this.isdefault = isdefault;
+    }
+
+    public String getUserrole() {
+        return userrole;
+    }
+
+    public void setUserrole(String userrole) {
+        this.userrole = userrole;
     }
 }

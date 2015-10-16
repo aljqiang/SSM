@@ -92,13 +92,22 @@
 			}, {
 				width : '80',
 				title : '用户角色',
-				field : 'userrole',
-				sortable : true
+				field : 'trole',
+				sortable : true,
+				formatter:function(value,row,index){
+					return value.userrole;
+				}
 			}, {
 				width : '80',
 				title : '用户类型',
-				field : 'text',
-				sortable : true
+				field : 'tdictionary',
+				sortable : true,
+				formatter:function(value,row,index){
+//					var jsonObjs = $.parseJSON(value);
+//					return jsonObjs.text;
+//					alert(value.text);
+					return value.text;
+				}
 			},{
 				width : '80',
 				title : '是否默认',
