@@ -14,21 +14,28 @@ import java.util.Map;
 
 public interface UserServiceI {
 
-    /** 用户登录*/
+    /**
+     * 用户登录
+     */
     Tuser login(Map params);
 
-    /** 用户菜单资源列表*/
+    /**
+     * 用户菜单资源列表
+     */
     List<String> resourceList(Integer id);
 
-    /** 菜单资源列表*/
+    /**
+     * 菜单资源列表
+     */
     List<String> resourceAllList();
 
-//    /** 用户列表*/
-//    List<Tuser> dataGrid(Tuser user, PageFilter ph);
+    /**
+     * 获取用户信息
+     */
+    List<Tuser> getUserInfoAll(int start, int rows);
 
-    /** 获取用户信息*/
-    List<Tuser> getAll(int start,int rows);
-
-    /** 获取用户记录数*/
+    /**
+     * 获取用户记录数
+     */
     int getNumber();
 }

@@ -57,7 +57,7 @@
   </select>
 
     <!-- 获取用户记录-->
-    <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    <select id="getUserInfoAll" resultMap="BaseResultMap" parameterType="java.lang.Integer">
         select *
         from  (
             select a.*, rownum rw from (
@@ -75,7 +75,7 @@
     </select>
 
     <!-- 获取用户记录数-->
-    <select id="selectCount" resultType="java.lang.Integer">
+    <select id="selectCount" resultType="java.lang.Integer" parameterType="java.lang.String">
         select count(*) from sys_user
     </select>
 

@@ -61,8 +61,8 @@ public class UserServiceImpl implements UserServiceI {
     }
 
     @Override
-    public List<Tuser> getAll(int start,int rows){
-        return userDao.selectAll(start,rows);
+    public List<Tuser> getUserInfoAll(int start,int rows){
+        return userDao.getUserInfoAll(start, rows);
     }
 
     @Override

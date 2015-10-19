@@ -7,12 +7,18 @@ import java.util.List;
 import java.util.Map;
 
 public interface TuserMapper {
-    /** 用户登录*/
+    /**
+     * 用户登录
+     */
     Tuser LoginQuery(Map params);
 
-    /** 获取用户记录*/
-    List<Tuser> selectAll(@Param(value="start")int start,@Param(value="rows")int rows);
+    /**
+     * 获取用户记录
+     */
+    List<Tuser> getUserInfoAll(@Param(value = "start") int start, @Param(value = "rows") int rows);
 
-    /** 获取用户记录数*/
+    /**
+     * 获取用户记录数
+     */
     int selectCount();
 }

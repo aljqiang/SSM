@@ -41,7 +41,7 @@ public class UserController extends BaseController {
 	@ResponseBody
 	public Map<String, Object> dataGrid(int page,int rows){
 		int start = (page-1)*rows;
-		List<Tuser> users = userService.getAll(start,rows);
+		List<Tuser> users = userService.getUserInfoAll(start,rows);
 		int total = userService.getNumber();
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("total", total);

@@ -33,11 +33,13 @@
 		    	if (result.success) {
 		    		window.location.href='${ctx}/admin/index';
 		    	}else{
-		    		$.messager.show({
-		    			title:'提示',
-		    			msg:'<div class="light-info"><div class="light-tip icon-tip"></div><div>'+result.msg+'</div></div>',
-		    			showType:'show'
-		    		});
+//		    		$.messager.show({
+//		    			title:'提示',
+//		    			msg:'<div class="light-info"><div class="light-tip icon-tip"></div><div>'+result.msg+'</div></div>',
+//		    			showType:'show'
+//		    		});
+
+					$.messager.alert('提示','<div class="light-info"><div class="light-tip icon-tip"></div><div>'+result.msg+'</div></div>','error');
 		    	}
 		    }
 		});
@@ -66,7 +68,7 @@
 	    			<td><input class="easyui-validatebox" type="password" name="password" value="1" /></td>
 	    		</tr>
 	    		<%--<tr>--%>
-	    			<%--<td>坐席编号:</td>--%>
+	    			<%--<td>编号:</td>--%>
 	    			<%--<td><input class="easyui-validatebox" type="text" name="zxbh" data-options="required:true" value=""></input></td>--%>
 	    		<%--</tr>--%>
 	    	</table>
