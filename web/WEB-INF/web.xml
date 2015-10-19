@@ -45,7 +45,7 @@
 
     <!-- 配置spring mvc -->
     <servlet>
-        <servlet-name>springMvc</servlet-name>
+        <servlet-name>SSM</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
@@ -56,7 +56,7 @@
 
     <!-- 配置spring mvc mapping -->
     <servlet-mapping>
-        <servlet-name>springMvc</servlet-name>
+        <servlet-name>SSM</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
