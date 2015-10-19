@@ -26,7 +26,7 @@ html{overflow:hidden;}
 
 .userInfoArea2{}
 #userPic{float:left;}
-.userPic2{width:100px;height:100px;border:1px solid #ccc;margin:6px 0 0 10px;background:url(../../KJAF/img/noPic.gif) no-repeat;}
+.userPic2{width:100px;height:100px;border:1px solid #ccc;margin:6px 0 0 10px;background:url(../../images/index/noPic.gif) no-repeat;}
 .haveUserPic2{width:100px;height:100px;border:1px solid #ccc;margin:6px 0 0 10px;}
 .userInfo2{margin:6px 0 0 120px;list-style:none;}
 .userInfo2 li{margin:4px;color:#999;}
