@@ -3,11 +3,9 @@ package com.ssm.service.impl;
 import com.ssm.IDao.sys.TresourceMapper;
 import com.ssm.IDao.sys.TuserMapper;
 import com.ssm.model.sys.Tresource;
-import com.ssm.model.sys.Trole;
 import com.ssm.model.sys.Tuser;
 import com.ssm.service.UserServiceI;
 import org.apache.log4j.Logger;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -61,47 +59,6 @@ public class UserServiceImpl implements UserServiceI {
         }
         return resourceList;
     }
-
-//    @Override
-//    public List<Tuser> dataGrid(Tuser user, PageFilter ph) {
-//        List<Tuser> ul = new ArrayList<Tuser>();
-//        Map<String, Object> params = new HashMap<String, Object>();
-//        String hql = " from Tuser t ";
-//        List<Tuser> l = userDao.find(hql + whereHql(user, params) + orderHql(ph), params, ph.getPage(), ph.getRows());
-//        if(l!=null){
-//            for (Tuser t : l) {
-//                Tuser u = new Tuser();
-//                BeanUtils.copyProperties(t, u);
-//                Set<Trole> roles = t.getRoles();
-//                if ((roles != null) && !roles.()) {
-//                    String roleIds = "";
-//                    String roleNames = "";
-//                    boolean b = false;
-//                    for (Trole tr : roles) {
-//                        if (b) {
-//                            roleIds += ",";
-//                            roleNames += ",";
-//                        } else {
-//                            b = true;
-//                        }
-//                        roleIds += tr.getId();
-//                        roleNames += tr.getName();
-//                    }
-//                    u.setRoleIds(roleIds);
-//                    u.setRoleNames(roleNames);
-//                }
-//                if (t.getOrganization() != null) {
-//                    u.setOrganizationId(t.getOrganization().getId());
-//                    u.setOrganizationName(t.getOrganization().getName());
-//                }
-//                if (t.getZym() != null) {
-//                    u.setZym(t.getZym());
-//                }
-//                ul.add(u);
-//            }
-//        }
-//        return ul;
-//    }
 
     @Override
     public List<Tuser> getAll(int start,int rows){

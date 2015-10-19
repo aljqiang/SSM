@@ -30,10 +30,6 @@ public class UserController extends BaseController {
 	@Autowired
 	private UserServiceI userService;
 
-//	@Autowired
-//	private DictionaryServiceI dictionaryService;
-
-	
 	@RequestMapping("/manager")
 	public String manager(HttpServletRequest request) {
 //		request.setAttribute("usertypeJson", JSON.toJSONString(dictionaryService.combox("usertype")));
