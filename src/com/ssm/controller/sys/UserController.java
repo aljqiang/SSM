@@ -1,13 +1,7 @@
 package com.ssm.controller.sys;
 
-
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.ssm.controller.base.BaseController;
 import com.ssm.model.sys.Tuser;
-import com.ssm.pageModel.base.Grid;
-import com.ssm.pageModel.base.PageFilter;
-import com.ssm.pageModel.sys.User;
 import com.ssm.service.UserServiceI;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

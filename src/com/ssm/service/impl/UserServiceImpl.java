@@ -5,7 +5,6 @@ import com.ssm.IDao.sys.TuserMapper;
 import com.ssm.model.sys.Tresource;
 import com.ssm.model.sys.Trole;
 import com.ssm.model.sys.Tuser;
-import com.ssm.pageModel.base.PageFilter;
 import com.ssm.service.UserServiceI;
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeanUtils;
