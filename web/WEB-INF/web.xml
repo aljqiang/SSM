@@ -33,6 +33,7 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <!-- Druid数据源之间的管理关联监控统计-->
     <filter>
         <filter-name>DruidWebStatFilter</filter-name>
         <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
@@ -45,6 +46,16 @@
         <filter-name>DruidWebStatFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+    <!-- Druid监控 -->
+    <servlet>
+        <servlet-name>DruidStatView</servlet-name>
+        <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DruidStatView</servlet-name>
+        <url-pattern>/druid/*</url-pattern>  <!-- 数据源集成了监控页面，输入工程后加druid/index.html-->
+    </servlet-mapping>
 
     <!-- 开启spring功能 -->
     <listener>
