@@ -15,10 +15,10 @@ public interface TuserMapper {
     /**
      * 获取用户记录
      */
-    List<Tuser> getUserInfoAll(@Param(value = "start") int start, @Param(value = "rows") int rows);
+    List<Tuser> getUserInfoAll(Map params);
 
     /**
-     * 获取用户记录数
+     * 获取总记录数
      */
-    int selectCount();
+    int selectCount(Map params);
 }

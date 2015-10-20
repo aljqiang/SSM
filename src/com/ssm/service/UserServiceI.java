@@ -32,10 +32,10 @@ public interface UserServiceI {
     /**
      * 获取用户信息
      */
-    List<Tuser> getUserInfoAll(int start, int rows);
+    List<Tuser> getUserInfoAll(Map params);
 
     /**
-     * 获取用户记录数
+     * 获取总记录数
      */
-    int getNumber();
+    int getNumber(Map params);
 }

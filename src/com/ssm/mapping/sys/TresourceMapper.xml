@@ -17,21 +17,21 @@
     ID, NAME, URL, DESCRIPTION, ICON, PID, SEQ, STATE, RESOURCETYPE, CREATEDATETIME
   </sql>
 
-  <!-- 查询菜单-->
-  <select id="getUserMenu" resultMap="BaseResultMap" parameterType="java.lang.String" >
+  <!-- 查询用户菜单-->
+  <select id="getUserMenu" resultMap="BaseResultMap" parameterType="Map" >
           select
                 distinct t.*
           from
                 sys_resource t
           where 1=1
           <if test="resourcetype != null" >
-                and t.resourcetype = #{resourcetype,jdbcType=VARCHAR}
+                and t.resourcetype = #{resourcetype}
           </if>
           order by t.seq,t.id
   </select>
 
-    <!-- 获取用户资源列表-->
-    <select id="getResoureByUser" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    <!-- 获取用户菜单资源列表-->
+    <select id="getResoureByUser" resultMap="BaseResultMap" parameterType="Map" >
         select
             distinct re.*
         from sys_resource re
@@ -40,20 +40,20 @@
             select ur.role_id from sys_user u left join sys_user_role ur on ur.user_id = u.id
             where 1=1
             <if test="id != null" >
-                  and u.id = #{id,jdbcType=VARCHAR}
+                  and u.id = #{id}
             </if>
             <if test="loginname != null" >
-                and u.loginname = #{loginname,jdbcType=VARCHAR}
+                and u.loginname = #{loginname}
             </if>
             <if test="resourcetype != null" >
-                and re.resourcetype = #{resourcetype,jdbcType=VARCHAR}
+                and re.resourcetype = #{resourcetype}
             </if>
         )
         order by re.seq,re.id
     </select>
 
     <!-- 获取所有的资源列表-->
-    <select id="getResourceAll" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    <select id="getResourceAll" resultMap="BaseResultMap" parameterType="Map" >
         select
             distinct re.*
         from

@@ -61,12 +61,12 @@ public class UserServiceImpl implements UserServiceI {
     }
 
     @Override
-    public List<Tuser> getUserInfoAll(int start,int rows){
-        return userDao.getUserInfoAll(start, rows);
+    public List<Tuser> getUserInfoAll(Map params){
+        return userDao.getUserInfoAll(params);
     }
 
     @Override
-    public int getNumber() {
-        return userDao.selectCount();
+    public int getNumber(Map params) {
+        return userDao.selectCount(params);
     }
 }

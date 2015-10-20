@@ -40,9 +40,15 @@ public class UserController extends BaseController {
 	@RequestMapping("/dataGrid")
 	@ResponseBody
 	public Map<String, Object> dataGrid(int page,int rows){
+		Map<String,Object> params =new HashMap<String,Object>();
 		int start = (page-1)*rows;
-		List<Tuser> users = userService.getUserInfoAll(start,rows);
-		int total = userService.getNumber();
+
+		params.put("tname","sys_user");
+		params.put("start",start);
+		params.put("rows",rows);
+
+		List<Tuser> users = userService.getUserInfoAll(params);
+		int total = userService.getNumber(params);
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("total", total);
 		map.put("rows", users);

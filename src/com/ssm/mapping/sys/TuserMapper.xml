@@ -30,34 +30,16 @@
   </sql>
 
     <!-- 用户登录-->
-    <select id="LoginQuery" resultMap="BaseResultMap" parameterType="java.lang.String">
+    <select id="LoginQuery" resultMap="BaseResultMap" parameterType="Map">
         select
         <include refid="Base_Column_List"/>
         from SYS_USER
-        where loginname=#{loginname,jdbcType=VARCHAR}
-        and password=#{password,jdbcType=VARCHAR}
+        where loginname=#{loginname}
+        and password=#{password}
     </select>
 
-    <!-- 获取用户资源列表-->
-    <select id="getUserResoureList" resultMap="BaseResultMap" parameterType="java.lang.Integer">
-    select
-              u.*,
-              ur.*,
-              r.*,
-              rr.*,
-              re.*
-    from sys_user u
-    inner join sys_user_role ur on u.id = ur.user_id
-    inner join sys_role r on ur.role_id = r.id
-    inner join sys_role_resource rr on r.id = rr.role_id
-    inner join sys_resource re on rr.resource_id = re.id
-    where u.id =#{id,jdbcType=Integer}
-    order by re.id asc
-
-  </select>
-
     <!-- 获取用户记录-->
-    <select id="getUserInfoAll" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    <select id="getUserInfoAll" resultMap="BaseResultMap" parameterType="Map">
         select *
         from  (
             select a.*, rownum rw from (
@@ -74,9 +56,10 @@
         where rw &gt;= #{start}
     </select>
 
-    <!-- 获取用户记录数-->
-    <select id="selectCount" resultType="java.lang.Integer" parameterType="java.lang.String">
-        select count(*) from sys_user
+    <!-- 获取总记录数-->
+    <select id="selectCount" resultType="java.lang.Integer" parameterType="Map" statementType="STATEMENT">
+        select count(*) from ${tname}
+        <!--$: 直接显示当前值，不会处理的; #: 当成字符串处理-->
     </select>
 
 </mapper>
