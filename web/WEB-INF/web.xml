@@ -172,15 +172,20 @@
         <welcome-file>/index.jsp</welcome-file>
     </welcome-file-list>
 
-    <!--&lt;!&ndash; 找不到页错误转向 &ndash;&gt;-->
-    <!--<error-page>-->
-    <!--<error-code>404</error-code>-->
-    <!--<location>/error/404.jsp</location>-->
-    <!--</error-page>-->
-    <!--&lt;!&ndash; 系统内部错误转向 &ndash;&gt;-->
-    <!--<error-page>-->
-    <!--<error-code>500</error-code>-->
-    <!--<location>/error/500.jsp</location>-->
-    <!--</error-page>-->
+    <!-- 资源权限不足 -->
+    <error-page>
+    <error-code>403</error-code>
+    <location>/error/403.jsp</location>
+    </error-page>
+    <!-- 找不到页错误转向 -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error/404.jsp</location>
+    </error-page>
+    <!-- 系统内部错误转向 -->
+    <error-page>
+    <error-code>500</error-code>
+    <location>/error/500.jsp</location>
+    </error-page>
 
 </web-app>
