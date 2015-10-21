@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 /**
+ * 系统日志拦截器
  * User: Larry
  * Date: 2015-10-21
  * Time: 9:23

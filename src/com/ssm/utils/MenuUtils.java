@@ -43,10 +43,6 @@ public class MenuUtils {
             }
         }
 
-        String str="test";
-        str=null;
-        str.toString();
-
         return createHtml(ret);
     }
 
