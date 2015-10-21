@@ -60,4 +60,29 @@
         </mvc:interceptor>
     </mvc:interceptors>
 
+    <!-- Aop日志类 -->
+    <bean id="LogInterceptor" class="com.ssm.framework.interceptors.LogInterceptor"></bean>
+
+    <!-- 配置日志拦截器 -->
+    <!--
+    配置日志拦截器，使用Aop记录日志
+    注意:
+        1). 此处proxy-target-class="true" 否则Action内的参数会被拦截掉,导致action内无法获得前台传递的参数
+        2). Action需交给spring容器去管理
+    -->
+    <aop:config expose-proxy="true" proxy-target-class="true">
+        <aop:aspect id="aopRiZhiAspect" ref="LogInterceptor">
+            <!-- 对哪些方法进行日志记录, 此处屏蔽action内的set get方法 -->
+            <aop:pointcut id="logService"
+                          expression="(execution(* com.ssm.controller..*.*(..) )
+                          and (!execution(* com.ssm.controller..*.set*(..)) )
+                          and (!execution(* com.ssm.controller..*.get*(..)))
+                          and (!execution(* com.ssm.controller..*.initBinder*(..))))"/>
+
+            <aop:before pointcut-ref="logService" method="doBefore"/>
+            <aop:after pointcut-ref="logService" method="doAfter"/>
+            <aop:around pointcut-ref="logService" method="doAround"/>
+        </aop:aspect>
+    </aop:config>
+
 </beans>
