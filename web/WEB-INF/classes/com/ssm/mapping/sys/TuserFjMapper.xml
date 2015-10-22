@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.IDao.sys.TuserFjMapper" >
+  <resultMap id="BaseResultMap" type="com.ssm.model.sys.TuserFj" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="USER_ID" property="userId" jdbcType="DECIMAL" />
+    <result column="URL" property="url" jdbcType="VARCHAR" />
+    <result column="SLTURL" property="slturl" jdbcType="VARCHAR" />
+    <result column="WJM" property="wjm" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="VARCHAR" />
+    <result column="TOMCATURL" property="tomcaturl" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, USER_ID, URL, SLTURL, WJM, CREATETIME, TOMCATURL
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from SYS_USER_FJ
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from SYS_USER_FJ
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.ssm.model.sys.TuserFj" >
+    insert into SYS_USER_FJ (ID, USER_ID, URL, 
+      SLTURL, WJM, CREATETIME, 
+      TOMCATURL)
+    values (#{id,jdbcType=DECIMAL}, #{userId,jdbcType=DECIMAL}, #{url,jdbcType=VARCHAR}, 
+      #{slturl,jdbcType=VARCHAR}, #{wjm,jdbcType=VARCHAR}, #{createtime,jdbcType=VARCHAR}, 
+      #{tomcaturl,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ssm.model.sys.TuserFj" >
+    insert into SYS_USER_FJ
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="userId != null" >
+        USER_ID,
+      </if>
+      <if test="url != null" >
+        URL,
+      </if>
+      <if test="slturl != null" >
+        SLTURL,
+      </if>
+      <if test="wjm != null" >
+        WJM,
+      </if>
+      <if test="createtime != null" >
+        CREATETIME,
+      </if>
+      <if test="tomcaturl != null" >
+        TOMCATURL,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=DECIMAL},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="slturl != null" >
+        #{slturl,jdbcType=VARCHAR},
+      </if>
+      <if test="wjm != null" >
+        #{wjm,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="tomcaturl != null" >
+        #{tomcaturl,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ssm.model.sys.TuserFj" >
+    update SYS_USER_FJ
+    <set >
+      <if test="userId != null" >
+        USER_ID = #{userId,jdbcType=DECIMAL},
+      </if>
+      <if test="url != null" >
+        URL = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="slturl != null" >
+        SLTURL = #{slturl,jdbcType=VARCHAR},
+      </if>
+      <if test="wjm != null" >
+        WJM = #{wjm,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        CREATETIME = #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="tomcaturl != null" >
+        TOMCATURL = #{tomcaturl,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ssm.model.sys.TuserFj" >
+    update SYS_USER_FJ
+    set USER_ID = #{userId,jdbcType=DECIMAL},
+      URL = #{url,jdbcType=VARCHAR},
+      SLTURL = #{slturl,jdbcType=VARCHAR},
+      WJM = #{wjm,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=VARCHAR},
+      TOMCATURL = #{tomcaturl,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>
