@@ -17,7 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
  */
 public class SecurityInterceptor implements HandlerInterceptor {
 
-	private List<String> excludeUrls;// 不需要拦截的资源
+	private List<String> excludeUrls;  // 不需要拦截的资源
 
 	public List<String> getExcludeUrls() {
 		return excludeUrls;
@@ -54,13 +54,15 @@ public class SecurityInterceptor implements HandlerInterceptor {
 		String contextPath = request.getContextPath();
 		String url = requestUri.substring(contextPath.length());
 		SessionInfo sessionInfo = (SessionInfo) request.getSession().getAttribute(GlobalConstant.SESSION_INFO);
-		//判断是否包含在菜单权限里
 
-		if ((url.indexOf("/admin/") > -1) || excludeUrls.contains(url)) {// 如果要访问的资源是不需要验证的
+		/**
+		 * 判断是否包含在菜单权限里
+		 */
+		if ((url.indexOf("/admin/") > -1) || excludeUrls.contains(url)) {  // 如果要访问的资源是不需要验证的
 			return true;
 		}
 		
-		if ((sessionInfo == null) || (sessionInfo.getId() == null)) {// 如果没有登录或登录超时
+		if ((sessionInfo == null) || (sessionInfo.getId() == null)) {  // 如果没有登录或登录超时
 			request.setAttribute("msg", "您还没有登录或登录已超时，请重新登录，然后再刷新本功能！");
 			request.getRequestDispatcher("/error/noSession.jsp").forward(request, response);
 			return false;
@@ -70,7 +72,7 @@ public class SecurityInterceptor implements HandlerInterceptor {
 			return true;
 		}
 
-		if (!sessionInfo.getResourceList().contains(url)) {// 如果当前用户没有访问此资源的权限
+		if (!sessionInfo.getResourceList().contains(url)) {  // 如果当前用户没有访问此资源的权限
 			request.setAttribute("msg", "您没有访问此资源的权限！<br/>请联系超管赋予您<br/>[" + url + "]<br/>的资源访问权限！");
 			request.getRequestDispatcher("/error/noSecurity.jsp").forward(request, response);
 			return false;

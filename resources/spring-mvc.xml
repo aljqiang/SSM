@@ -37,9 +37,11 @@
             </list>
         </property>
     </bean>
+
     <!-- 定义文件上传处理器 -->
     <bean id="multipartResolver"
           class="org.springframework.web.multipart.commons.CommonsMultipartResolver" p:defaultEncoding="UTF-8"/>
+
     <!-- 对模型视图名称的解析，即在模型视图名称添加前后缀 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/views/"
           p:suffix=".jsp"/>
@@ -84,5 +86,31 @@
             <aop:around pointcut-ref="logService" method="doAround"/>
         </aop:aspect>
     </aop:config>
+
+    <!-- 事物的具体内容-->
+    <!--<tx:advice id="transactionAdvice" transaction-manager="transactionManager">-->
+        <!--<tx:attributes>-->
+            <!--<tx:method name="add*" propagation="REQUIRED" />-->
+            <!--<tx:method name="append*" propagation="REQUIRED" />-->
+            <!--<tx:method name="insert*" propagation="REQUIRED" />-->
+            <!--<tx:method name="save*" propagation="REQUIRED" />-->
+            <!--<tx:method name="update*" propagation="REQUIRED" />-->
+            <!--<tx:method name="modify*" propagation="REQUIRED" />-->
+            <!--<tx:method name="edit*" propagation="REQUIRED" />-->
+            <!--<tx:method name="delete*" propagation="REQUIRED" />-->
+            <!--<tx:method name="remove*" propagation="REQUIRED" />-->
+            <!--<tx:method name="repair" propagation="REQUIRED" />-->
+            <!--<tx:method name="delAndRepair" propagation="REQUIRED" />-->
+
+
+            <!--<tx:method name="get*" propagation="SUPPORTS" />-->
+            <!--<tx:method name="find*" propagation="SUPPORTS" />-->
+            <!--<tx:method name="load*" propagation="SUPPORTS" />-->
+            <!--<tx:method name="search*" propagation="SUPPORTS" />-->
+            <!--<tx:method name="datagrid*" propagation="SUPPORTS" />-->
+
+            <!--<tx:method name="*" propagation="SUPPORTS" />-->
+        <!--</tx:attributes>-->
+    <!--</tx:advice>-->
 
 </beans>
