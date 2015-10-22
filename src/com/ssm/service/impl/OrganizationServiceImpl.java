@@ -45,7 +45,7 @@ public class OrganizationServiceImpl implements OrganizationServiceI {
                     tree.setPid(r.getPid().toString());
                 }
 
-                log.info("id=" + tree.getId() + ",pid=" + tree.getPid());
+//                log.info("id=" + tree.getId() + ",pid=" + tree.getPid());
 
                 tree.setText(r.getName());
                 tree.setIconCls(r.getIcon());
