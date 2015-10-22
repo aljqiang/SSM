@@ -50,7 +50,7 @@ public class MenuUtils {
         String result = "";
         String menu = "<div title=\"%s\" iconCls=\"%s\"  style=\"padding:10px;\"><ul class=\"easyui-tree\" data-options='data:%s'></ul></div>";
         for (TreeNode o : list) {
-            result = result + String.format(menu, new Object[]{o.getText(),o.getIconCls(), JSONBinder.buildNormalBinder().toJson(o.getChildren())});
+            result = result + String.format(menu, new Object[]{o.getText(),o.getIconCls(),JsonUtil.toJSONString(o.getChildren())});
         }
         return result;
     }
