@@ -24,16 +24,16 @@
 	var organizationTree;
 	$(function() {
 	
-		<%--organizationTree = $('#organizationTree').tree({--%>
-			<%--url : '${ctx}/organization/tree',--%>
-			<%--parentField : 'pid',--%>
-			<%--lines : true,--%>
-			<%--onClick : function(node) {--%>
-				<%--dataGrid.datagrid('load', {--%>
-				    <%--organizationId: node.id--%>
-				<%--});--%>
-			<%--}--%>
-		<%--});--%>
+		organizationTree = $('#organizationTree').tree({
+			url : '${ctx}/organization/tree',
+			parentField : 'pid',
+			lines : true,
+			onClick : function(node) {
+				dataGrid.datagrid('load', {
+				    organizationId: node.id
+				});
+			}
+		});
 	
 		dataGrid = $('#dataGrid').datagrid({
 			url : '${ctx}/user/dataGrid',

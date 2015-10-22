@@ -19,6 +19,8 @@ public class Torganization {
 
     private Date createdatetime;
 
+    private Torganization organization;
+
     public Integer getId() {
         return id;
     }
@@ -81,5 +83,13 @@ public class Torganization {
 
     public void setCreatedatetime(Date createdatetime) {
         this.createdatetime = createdatetime;
+    }
+
+    public Torganization getOrganization() {
+        return organization;
+    }
+
+    public void setOrganization(Torganization organization) {
+        this.organization = organization;
     }
 }
