@@ -20,7 +20,7 @@ import javax.mail.internet.MimeMultipart;
 import javax.mail.internet.MimeUtility;
 
 /**
- * Java Mail 工具栏
+ * Java Mail 工具类
  * User: Larry
  * Date: 2016-01-08
  * Time: 10:44
@@ -72,6 +72,7 @@ public class MailUtils {
 //            nick = "aljqiang";
             // nick + from 组成邮箱的发件人信息
 
+            /**多个邮箱发送*/
             // 邮箱信息
             MailInfo mailInfo1 = new MailInfo("smtp.163.com", "aljqiang", "Laijq@9023*", "aljqiang@163.com", "aljqiang");
             MailInfo mailInfo2 = new MailInfo("192.168.230.238", "laijq", "hold?fish:palm", "laijq@rongrmb.com", "laijq");
@@ -155,7 +156,9 @@ public class MailUtils {
                 msg.saveChanges();
                 // 发送信件
                 Transport transport = session.getTransport("smtp");
-                System.out.println("##############邮件开始发送##############");
+                log.info("##############邮件开始发送##############");
+                log.info("[收件人地址:"+arr[0]+"]");
+
                 transport.connect(mi.getHost(), mi.getUsername(), mi.getPassword());
                 transport.sendMessage(msg,
                         msg.getRecipients(Message.RecipientType.TO));
@@ -192,11 +195,11 @@ public class MailUtils {
                     filepath.add("D:\\in2.txt");
                     result = MailUtils.sendMail(mailInfoMap.get("1"),"595227518@qq.com,aljqiang@aliyun.com", "测试邮件1", "这是一封测试邮件，请勿回复！！！", filepath);
                 }
-                System.out.println(result ? "##############邮件发送成功##############" : "##############邮件发送失败##############");
+                log.info(result ? "##############邮件发送成功##############" : "##############邮件发送失败##############");
             }
 
         } catch (Exception e) {
-            System.out.println("##############邮件发送失败##############");
+            log.info("##############邮件发送失败##############");
             e.printStackTrace();
         }
     }
