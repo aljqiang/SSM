@@ -38,7 +38,7 @@ public class MailUtils {
         filepath.add("D://in2.txt");
 
         for (int i = 0; i < 2; i++) {
-            MailUtils.send(mailInfoMap.get(String.valueOf(i + 1)), addressList, "Hello Java Mail", "测试邮件, 这是一封测试邮件，请勿回复！！！", filepath);
+            MailUtils.send(mailInfoMap.get(String.valueOf(i + 1)), addressList, "Java Mail", "测试邮件, 这是一封测试邮件，请勿回复！！！", filepath);
         }
     }
 
