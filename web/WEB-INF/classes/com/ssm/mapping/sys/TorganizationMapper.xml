@@ -14,6 +14,22 @@
   <sql id="Base_Column_List" >
     ID, NAME, ADDRESS, CODE, ICON, PID, SEQ, CREATEDATETIME
   </sql>
+
+  <!-- 获取组织机构-->
+  <select id="getOrgTree" resultMap="BaseResultMap" parameterType="Map">
+    SELECT distinct
+                t.id,
+                t.address,
+                t.code,
+                t.createdatetime,
+                t.icon,
+                t.name,
+                t.pid,
+                t.seq
+    from SYS_ORGANIZATION t
+    order by t.seq
+  </select>
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />

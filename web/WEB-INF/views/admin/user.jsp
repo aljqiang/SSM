@@ -147,7 +147,8 @@
 					var str = '';
 					if(row.isdefault!=0){
 						if ($.canEdit) {
-							str += $.formatString('<a href="javascript:void(0)" onclick="editFun(\'{0}\');" >编辑</a>', row.id);
+//							str += $.formatString('<a href="javascript:void(0)" onclick="editFun(\''+ row.OPTID + '\',\''+rec.OPTPER + '\');" >编辑</a>', row.id);
+							str += $.formatString('<a href="javascript:void(0)" onclick="editFun(\''+ row.ID + '\');" >编辑</a>', row.id);
 						}
 						str += '&nbsp;&nbsp;|&nbsp;&nbsp;';
 						if ($.canDelete) {

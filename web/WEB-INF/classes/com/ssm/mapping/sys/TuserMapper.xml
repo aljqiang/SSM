@@ -53,7 +53,14 @@
                 left join sys_role r on r.id=ur.role_id
                 order by u.id, u.rowid) a
             where rownum &lt;= #{rows} )
-        where rw &gt;= #{start}
+        where 1=1
+        and rw &gt;= #{start}
+        <if test="organization_id !=null and organization_id !=1" >
+            and organization_id = #{organization_id}
+        </if>
+        <if test="user_id !=null and user_id !=''" >
+            and id = #{user_id}
+        </if>
     </select>
 
     <!-- 获取总记录数-->

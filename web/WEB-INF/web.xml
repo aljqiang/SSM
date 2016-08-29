@@ -162,6 +162,26 @@
         <url-pattern>/uploader</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>downloadFile</servlet-name>
+        <servlet-class>com.ssm.web.upload.DownloadFileServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>downloadFile</servlet-name>
+        <url-pattern>/downloadFile.down</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>fileOperServlet</servlet-name>
+        <servlet-class>com.ssm.web.upload.FileOperServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>fileOperServlet</servlet-name>
+        <url-pattern>/fileOperServlet.down</url-pattern>
+    </servlet-mapping>
+
     <!-- 配置session超时时间，单位分钟 -->
     <session-config>
         <session-timeout>15</session-timeout>
